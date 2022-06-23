@@ -3,10 +3,38 @@ var mount = 0;
 var hount = 0;
 var lov=0;
 var big =0;
+
+// Bet Number Change Section //
+
+var ad=0;
+var subtract = document.querySelector("#min");
+var add = document.querySelector("#max");
+var subChange = document.querySelector("#subChange");
+
+add.addEventListener("click",function(){
+    //lov+=10;
+    ad+=10;
+    console.log(ad);
+    subChange.textContent=100+(ad*10);
+})
+
+subtract.addEventListener("click",function(){
+    //lov-=10;
+
+    if(subChange.innerHTML>0){
+        ad-=10;
+        console.log(ad);
+        subChange.textContent=100+(ad*10);
+        console.log(subChange.innerHTML);  
+    }
+})
+// Balance and setting table random values Section //
+
 var z = document.getElementById("sub");
 z.addEventListener("click", function() {
   for (var i = 1; i < 10; i++) {
-    lov+=10;
+    console.log(ad);
+    lov+=10+ad;
     let x = Math.floor(Math.random() * 20) + 1;
     var y = document.getElementsByClassName(i)[0];
      y.textContent = x;
@@ -55,4 +83,3 @@ z.addEventListener("click", function() {
   }
 })
  
-
