@@ -1,33 +1,51 @@
 body{
-  text-align: center;
-}
+    text-align: center;
+  }
+  
+  table{
+    border-collapse: collapse;
+    margin: auto;
+    height:70vh;
+    width: 170vh;
+    
+  }
+  td{
+    height:5vh;
+    width:5vh;
+  }
+  
+  .navbar-brand{
+    font-size:1.5rem;
+  }
+  
+  .navbar {
+    box-sizing: border-box;
+    height:55px;
+  }
+  
+  .nav-item{
+    box-sizing: border-box;
+    padding-top: 3px;
+    margin:0 10px;
+    font-size:1rem;
+  }
+  
+  .right{
+    position: absolute;
+    right:40px;
+  }
 
-table{
-  border-collapse: collapse;
-  margin: auto;
-}
-td{
-  height:5vh;
-  width:5vh;
-}
+  #mbal{
+      display: inline-block;
+      position: absolute;
+      left:126px;
+  }
 
-.navbar-brand{
-  font-size:1.5rem;
-}
+  #sub{
+      text-align: left;
+  }
 
-.navbar {
-  box-sizing: border-box;
-  height:55px;
-}
-
-.nav-item{
-  box-sizing: border-box;
-  padding-top: 10px;
-  margin:0 10px;
-  font-size:1rem;
-}
-
-.right{
-  position: absolute;
-  right:40px;
-}
+  .bet{
+      position: absolute;
+      right: 126px;
+  }
