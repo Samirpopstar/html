@@ -11,18 +11,15 @@ var subtract = document.querySelector("#min");
 var add = document.querySelector("#max");
 var subChange = document.querySelector("#subChange");
 
-if(subChange.innerHTML==900){
-  add.setAttribute("disabled","");
-}
-
-
 add.addEventListener("click",function(){
 
     if(subChange.innerHTML<1000){
       ad+=10;
       subChange.textContent=100+(ad*10);
-      console.log(subChange);
     }
+    console.log(bal.innerHTML);
+    console.log(subChange.innerHTML);
+   
 })
 
 subtract.addEventListener("click",function(){
@@ -30,7 +27,6 @@ subtract.addEventListener("click",function(){
 
     if(subChange.innerHTML>0){
         ad-=10;
-        console.log(ad);
         subChange.textContent=100+(ad*10);
     }
 })
@@ -38,7 +34,6 @@ subtract.addEventListener("click",function(){
 
 var z = document.getElementById("sub");
 z.addEventListener("click", function() {
-  console.log(subChange.innerHTML);
   if(bal.innerHTML!=0){
     for (var i = 1; i < 10; i++) {
       console.log(ad);
@@ -90,10 +85,32 @@ z.addEventListener("click", function() {
     z.setAttribute("disabled","");
   }
  
-  if (bal.innerHTML<=1000){
-    subChange.innerHTML= bal.innerHTML ;
-  }
-  
+ 
+  /*
+    */if (bal.innerHTML < 1000) {
+     if (bal.innerHTML < subChange.innerHTML) {
+      add.setAttribute("disabled", "");
+      subChange.innerHTML = bal.innerHTML;
+      console.log(ad);
+      ad= (subChange.innerHTML/10);
+      console.log(ad);
+    }
+    subtract.addEventListener("click",function() {
+      if (bal.innerHTML > subChange.innerHTML) {
+        add.removeAttribute("disabled", "")
+      }
+      if (bal.innerHTML < subChange.innerHTML) {
+        add.setAttribute("disabled", "");
+    }})
+    if (bal.innerHTML < subChange.innerHTML) {
+        add.setAttribute("disabled", "");
+    }
+    add.addEventListener("click",function() {
+      if (bal.innerHTML < subChange.innerHTML) {
+        add.setAttribute("disabled", "");
+        subChange.innerHTML = bal.innerHTML;
+      }
+    })
+    }
 })
-
 
