@@ -17,6 +17,11 @@ body{
   
   .navbar-brand{
     font-size:1.5rem;
+    margin-left:16vh;
+  }
+
+  .navbar-toggler{
+    margin-right: 5px;
   }
   
   .navbar {
@@ -52,4 +57,40 @@ body{
   .bet{
       position: absolute;
       right: 126px;
+  }
+  #max:disabled{
+    border: 2px solid black;
+    color:black;
+  }
+
+  .formh1{
+    text-align: center;
+    padding-top:60px;
+    padding-bottom: 20px;
+  }
+
+  form{
+    text-align: left;
+  }
+
+  .form-label{
+    font-weight: 600;
+  }
+
+  .loginBtn{
+    height:50px;
+    width: 250px;
+    margin: 20px 30px;
+  }
+
+  .aboutHeading{
+    margin-top: 15px;
+  }
+  
+  #about{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    padding:50px 50px 0;
+    line-height: 2;
+    text-align: left;
   }
