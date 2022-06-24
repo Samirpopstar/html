@@ -13,7 +13,7 @@ var subChange = document.querySelector("#subChange");
 
 add.addEventListener("click",function(){
 
-    if(subChange.innerHTML<1000){
+    if(subChange.innerHTML<1000 ){
       ad+=10;
       subChange.textContent=100+(ad*10);
     }
@@ -34,7 +34,7 @@ subtract.addEventListener("click",function(){
 
 var z = document.getElementById("sub");
 z.addEventListener("click", function() {
-  if(bal.innerHTML!=0){
+  if(bal.innerHTML!=0 && subChange.innerHTML!=0){
     for (var i = 1; i < 10; i++) {
       console.log(ad);
       lov+=10+ad;
@@ -83,34 +83,37 @@ z.addEventListener("click", function() {
   if(bal.innerHTML<=0){
     document.querySelector("#bal").innerHTML = 0;
     z.setAttribute("disabled","");
+    subtract.style.cursor = "default";
   }
  
  
-  /*
-    */if (bal.innerHTML < 1000) {
+   if (bal.innerHTML < 1000) {
      if (bal.innerHTML < subChange.innerHTML) {
       add.setAttribute("disabled", "");
       subChange.innerHTML = bal.innerHTML;
-      console.log(ad);
-      ad= (subChange.innerHTML/10);
-      console.log(ad);
+      
+      ad= (subChange.innerHTML/10)-10;
+      
     }
     subtract.addEventListener("click",function() {
+      console.log(ad);
       if (bal.innerHTML > subChange.innerHTML) {
         add.removeAttribute("disabled", "")
       }
       if (bal.innerHTML < subChange.innerHTML) {
         add.setAttribute("disabled", "");
-    }})
-    if (bal.innerHTML < subChange.innerHTML) {
+    }
+    console.log(ad);
+  })
+    if (bal.innerHTML <= subChange.innerHTML) {
         add.setAttribute("disabled", "");
     }
     add.addEventListener("click",function() {
-      if (bal.innerHTML < subChange.innerHTML) {
+      if (bal.innerHTML <= subChange.innerHTML) {
         add.setAttribute("disabled", "");
         subChange.innerHTML = bal.innerHTML;
       }
     })
+    
     }
 })
-
