@@ -6,8 +6,7 @@ body{
     border-collapse: collapse;
     margin: auto;
     height:70vh;
-    width: 170vh;
-    
+    width: 170vh; 
   }
   td{
     border: 2px solid black;
@@ -58,10 +57,7 @@ body{
       position: absolute;
       right: 126px;
   }
-  #max:disabled{
-    border: 2px solid black;
-    color:black;
-  }
+
 
   .formh1{
     text-align: center;
@@ -93,4 +89,45 @@ body{
     padding:50px 50px 0;
     line-height: 2;
     text-align: left;
+  }
+
+  .start{
+    background-color: red;
+  }
+
+  .mid{
+    background-color: aqua;
+  }
+
+  .end{
+    background-color: seagreen;
+  }
+  
+  #mbal{
+    color: black;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: 7%;
+  }
+
+  #bal{
+    color:lime;
+  }
+
+  @media screen and (max-width: 700px) {
+    .navbar-brand{
+      margin-left:3vh;
+    }
+
+    table{
+      border-collapse: collapse;
+      margin: auto;
+      height:40vh;
+      width: 60vh; 
+    }
+
+    #mbal{    
+      position: absolute;
+      left:8%;
+    }
   }
